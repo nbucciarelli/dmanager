@@ -1,0 +1,16 @@
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/Nick\/misc_apps\/dmanager\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \000031;
+  }
+}
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
