@@ -1,0 +1,20 @@
+<!-- 
+  This template gets placed in the Pet tab's <ion-nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+<ion-view title="Exercise Information">
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item class="item-icon-right" ng-repeat="exercise in exercises.exercises" type="item-text-wrap" href="#/tab/exercise/{{exercise.id}}">
+        <h3>{{exercise.name}}</h3>
+        <p>{{exercise.difficulty}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      
+    </ion-list>
+
+  </ion-content>
+</ion-view>

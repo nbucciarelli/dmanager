@@ -6,7 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 'use strict';
-angular.module('PetsFrontend', ['ionic', 'config', 'PetsFrontend.services', 'PetsFrontend.controllers'])
+angular.module('DManagerFrontend', ['ionic', 'config', 'DManagerFrontend.services', 'DManagerFrontend.controllers'])
 
 
 .run(function($ionicPlatform) {
@@ -39,22 +39,22 @@ angular.module('PetsFrontend', ['ionic', 'config', 'PetsFrontend.services', 'Pet
     })
 
     // the pet tab has its own child nav-view and history
-    .state('tab.pet-index', {
-      url: '/pets',
+    .state('tab.exercise-index', {
+      url: '/exercises',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'exercises-tab': {
+          templateUrl: 'templates/exercise-index.html',
+          controller: 'ExerciseIndexCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.exercise-detail', {
+      url: '/exercise/:exerciseId',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'exercises-tab': {
+          templateUrl: 'templates/exercise-detail.html',
+          controller: 'ExerciseDetailCtrl'
         }
       }
     })
@@ -78,7 +78,7 @@ angular.module('PetsFrontend', ['ionic', 'config', 'PetsFrontend.services', 'Pet
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/exercises');
 
 });
 

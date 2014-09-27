@@ -20,7 +20,7 @@ var Orchestrator = require('orchestrator');
 
 var BASES = {
   android: 'res',
-  ios: 'PetsFrontend/Resources'
+  ios: 'DManagerFrontend/Resources'
 };
 var RESOURCE_DIR = 'resources';
 

@@ -21,5 +21,13 @@ module ExerciseApplication
     # config.i18n.default_locale = :de
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
     config.assets.precompile += %w( welcome.js exercises.js )
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        # location of your API
+        resource '*', :headers => :any, :methods => [:get, :post, :options, :put, :delete]
+      end
+    end    
   end
 end
