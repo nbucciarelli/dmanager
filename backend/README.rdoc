@@ -1,0 +1,7 @@
+
+- Pull
+- Bundle install
+- Create
+- Migrate
+- Seed
+

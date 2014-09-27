@@ -1,0 +1,22 @@
+%form
+  .form-group
+    %label{for: 'newExerciseName'} Name
+    %input#newExerciseName.form-control{ ng: { model: "formData.newExerciseName"}, type: "text"}
+
+  .form-group
+    %label{for: 'newExerciseExerciseType'} Exercise Type
+    %input#newExerciseExerciseType.form-control{ ng: { model: "formData.newExerciseExerciseType"}, type: "text"}
+    
+  .form-group
+    %label{for: "newExerciseDifficulty"} Difficulty
+    %input#newExerciseDifficulty.form-control{ ng: { model: "formData.newExerciseDifficulty"}, type: "text"}
+  .form-group
+    %label{for: "newExerciseDifficulty"} Muscles
+    %div{ multi: { select: '' }, input: { model: 'muscles.muscles' }, item: {label: 'name'}, tick: { property: "ticked"}, button: {label: "name"}}
+
+  .form-group
+    .btn-group
+
+      %button.btn.btn-primary{ ng: { click: "createExercise()"} } Create
+      %button.btn.btn-default{ ng: { click: "returnBack()"} } Return to exercise list
+      %button.btn.btn-danger{ ng: { click: "clearExercise()"} } Clear Exercise
